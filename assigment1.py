@@ -41,7 +41,7 @@ print(the_sequence(2))
 print(the_sequence(6))
 
 """
-Exercise 1
+Exercise 2
 """
 
 def is_valid_sudoku(sudoku):
