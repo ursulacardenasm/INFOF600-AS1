@@ -54,7 +54,7 @@ def is_valid_sudoku(sudoku):
     for row in board:
         for col in row:
             if col != '.':
-                if int(col) > 9 or int(col) < 1:
+                if not col.isdigit() or int(col) > 9 or int(col) < 1:
                     return False
 
     #check if there are not repeated values in the columns and rows
@@ -116,8 +116,6 @@ board = [["5", "3", ".", ".", "7", ".", ".", ".", "."],
     [".", ".", ".", ".", "8", ".", ".", "7", "9"]
 ]
 
-is_valid_sudoku(board)
-
 
 board2 = [["9", "2", "6", "1", ".", ".", "3", "4", "."],
     ["8", "5", ".", "9", "4", "3", ".", "2", "6"],
@@ -130,8 +128,6 @@ board2 = [["9", "2", "6", "1", ".", ".", "3", "4", "."],
     ["1", ".", ".", "3", ".", "6", ".", "5", "4"]
 ]
 
-is_valid_sudoku(board2)
-
 board3 = [["7", "2", "6", "1", ".", ".", "3", "4", "."],
     ["8", "5", ".", "a", "4", "3", ".", "2", "6"],
     ["4", ".", ".", "6", ".", "2", ".", ".", "."],
@@ -143,7 +139,9 @@ board3 = [["7", "2", "6", "1", ".", ".", "3", "4", "."],
     ["1", ".", ".", "3", ".", "6", ".", "5", "4"]
 ]
 
-is_valid_sudoku(board3)
+print(is_valid_sudoku(board))
+print(is_valid_sudoku(board2))
+print(is_valid_sudoku(board3))
 
 """
 Exercise 3
@@ -225,8 +223,8 @@ def is_valid_tictactoe(total):
 
     return True
 
-is_valid_tictactoe(["OOX","XXO","OXO"])
-is_valid_tictactoe(["XOX"," X "," "])
-is_valid_tictactoe(["XOX","O O","XOX"])
+print(is_valid_tictactoe(["OOX","XXO","OXO"]))
+print(is_valid_tictactoe(["XOX"," X "," "]))
+print(is_valid_tictactoe(["XOX","O O","XOX"]))
 
 
